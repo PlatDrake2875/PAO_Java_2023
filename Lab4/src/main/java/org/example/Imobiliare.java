@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Imobiliare {
     private enum tipImobil {
-        APARTAMENT, 
+        APARTAMENT,
         CASA,
         VILA,
         DUPLEX,
