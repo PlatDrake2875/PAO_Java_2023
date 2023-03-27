@@ -28,7 +28,7 @@ Audio Content: <br\>
 
 
 Classes Used:
-1) Menu  
+1) Menu \
 2.1, 2.2) User (Abstract), UserService (Interface) 
     3) Artist
     4) User
@@ -42,16 +42,16 @@ There are also some ENUMS and RECORDS involved in there that I
 didn't mentioned explicitly because they are of little concern.
 
 Queries:
-1) Create User \
-2) Display User Data (getters for each member. Should count as individual queries, but I prefer omitting this fact) \
-3) Sort Users \
-4) Display longest audio product \
-5) Change a product's price \
-6) Add discount to a product \
-7) Purchase a product \
-8) Make a playlist (Should use a HashMap for it) \
-9) Play the playlist  \
-\
+1) Create User 
+2) Display User Data (getters for each member. Should count as individual queries, but I prefer omitting this fact) 
+3) Sort Users 
+4) Display longest audio product
+5) Change a product's price 
+6) Add discount to a product 
+7) Purchase a product 
+8) Make a playlist (Should use a HashMap for it) 
+9) Play the playlist  
+
 
 1) Definirea sistemului/documentatie (0.5p)
 2) (minim) 10 operatiuni/interogari, 0.05p fiecare. punctaj maxim: 0.5p	
