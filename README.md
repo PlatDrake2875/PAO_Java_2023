@@ -15,16 +15,16 @@ Users:
 
 
 Audio Content: <br\>
-- Can be put up for sale and listened to if you own it (you either purchased it or made it).  <br\>
-- Products can be discounted for a limited amounted of time. <br\>
-- Content can be ordered by: <br\>
-    1) Alphabetical Order <br\>
-    2) Length \
-    3) Upload date \
-    4) Original release date (You might've first released the product on another platform and people tend to find it easier by the release date) \
-- Content can be grouped and displayed by:  \
-    1) Type (Song, Podcast, Audiobook)  \
-    2) Genre (Depends on the type) \
+- Can be put up for sale and listened to if you own it (you either purchased it or made it).  
+- Products can be discounted for a limited amounted of time. 
+- Content can be ordered by: 
+    1) Alphabetical Order 
+    2) Length 
+    3) Upload date 
+    4) Original release date (You might've first released the product on another platform and people tend to find it easier by the release date) 
+- Content can be grouped and displayed by:  
+    1) Type (Song, Podcast, Audiobook)  
+    2) Genre (Depends on the type) 
 
 
 Classes Used:
