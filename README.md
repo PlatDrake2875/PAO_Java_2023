@@ -30,12 +30,12 @@ Audio Content: <br\>
 Classes Used:
 1) Menu \
 2.1, 2.2) User (Abstract), UserService (Interface) \
-    3) Artist\
-    4) User\
+>>> 3) Artist\
+>>> 4) User\
 5.1, 5.2) Product (Abstract), ProductService (Interface)\
-	6) Song\
-	7) Podcast\
-	8) Audiobook\
+>>> 6) Song\
+>>> 7) Podcast\
+>>> 8) Audiobook\
 9) Playlist \
 
 There are also some ENUMS and RECORDS involved in there that I 
