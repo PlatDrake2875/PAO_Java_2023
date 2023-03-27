@@ -63,3 +63,7 @@ Queries:
 8) Sortarea elementelor: 0.1p. folosind streams/comparator/functional interfaces: 0.2p	
 9) Folosirea enum-urilor, folosirea optional, punctaj maxim: 0.2p 10) Folosirea structurilor de date: ArrayList/LinkedList/HashMap/HashSet/TreeMap/TreeSet, inafara sortarii. punctaj maxim: 0.4p	
 11) Intrebari generale, de ce am facut pana acum, inclusiv din subiectele discutate pe teams. poate sa includa SOLID principles/intrebari interviu. punctaj maxim: 1p
+
+
+
+TODO: Write some clean markup
