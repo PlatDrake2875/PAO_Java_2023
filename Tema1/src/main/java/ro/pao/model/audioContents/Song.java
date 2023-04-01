@@ -17,11 +17,24 @@ public class Song extends AbstractAudioContent {
     }
 
     //GETTERS
-    public String getGenre()
-    {
+    public String getGenre() {
         return genre;
     }
 
+    public String getAlbum() {
+        return album;
+    }
+
+    //SETTERS
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    //M
     @Override
     public void play() {
 
