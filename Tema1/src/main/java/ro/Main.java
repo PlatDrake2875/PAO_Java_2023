@@ -3,8 +3,9 @@ package ro;
 import ro.pao.model.abstracts.AbstractAudioContent;
 import ro.pao.model.enums.AudioContentType;
 
-import java.time.LocalDate;
+
 import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
 
         AbstractAudioContent audioContent1 = new AbstractAudioContent
                 ("Title",
-                new Date(26, 9, 2019),
+                new Date(26, Calendar.SEPTEMBER, 2019),
                 LocalTime.of(0, 2, 30, 42),
                 AudioContentType.SONG) {
             @Override
