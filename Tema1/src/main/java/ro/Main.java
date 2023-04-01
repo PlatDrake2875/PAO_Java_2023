@@ -29,5 +29,7 @@ public class Main {
                 System.out.println("Playing audio content");
             }
         };
+
+        audioContent1.play();
     }
 }
