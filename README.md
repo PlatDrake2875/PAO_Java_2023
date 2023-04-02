@@ -29,23 +29,23 @@ Audio Content:
     3) Title
     4) Author/Artist/Narrator name
 
-Classes Used:
+Classes Used:  
 1) Menu  
 2) AbstractUser  
 &#9; 3) Admin  
 &#9; 4) Artist  
 &#9; 5) User  
-6) AbstractAudioContent
-&#9; 7) Song  
-&#9; 8) Audiobook  
-&#9; 9) Podcast  
+6) AbstractAudioContent  
+&#9; 7) Song   
+&#9; 8) Audiobook   
+&#9; 9) Podcast   
 
 Enums:  
-1) UserType  
+1) UserType   
 2) AudioContentType  
 
-Records:  
-1) Playlist  
+Records:   
+1) Playlist   
 
 
 Queries:
