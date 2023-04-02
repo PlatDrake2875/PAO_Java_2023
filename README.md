@@ -2,6 +2,8 @@
 
 This application's purpose is to mimic most of the core functionality of Spotify and Audible if every song/podcast/audiobook was paid :).
 
+---
+
 This is a work in progress repo, so there'll be quite a bit of activity on 
 it, but the end product should follow the following structure, though its subject to change in the course of development:
 
