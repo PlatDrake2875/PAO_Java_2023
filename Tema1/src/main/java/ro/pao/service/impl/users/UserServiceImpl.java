@@ -1,11 +1,10 @@
-package ro.pao.service.impl;
+package ro.pao.service.impl.users;
 
 import ro.pao.model.enums.UserType;
 import ro.pao.model.users.User;
-import ro.pao.service.UserService;
+import ro.pao.service.usersServices.UserService;
 
 import java.util.*;
-import java.util.function.Predicate;
 
 public class UserServiceImpl implements UserService {
 
