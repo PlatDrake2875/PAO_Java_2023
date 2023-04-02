@@ -28,6 +28,32 @@ public class Podcast extends AbstractAudioContent {
         this.topics = topics;
     }
 
+    //Getters
+    public String getGenre() {
+        return genre;
+    }
+
+    public String[] getGuests() {
+        return guests;
+    }
+
+    public String[] getTopics() {
+        return topics;
+    }
+
+    //Setters
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setGuests(String[] guests) {
+        this.guests = guests;
+    }
+
+    public void setTopics(String[] topics) {
+        this.topics = topics;
+    }
+
     @Override
     public void play() {
         System.out.println("Playing podcast");

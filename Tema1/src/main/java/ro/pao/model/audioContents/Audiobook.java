@@ -9,8 +9,10 @@ import java.util.Date;
 public class Audiobook extends AbstractAudioContent {
 
     private String author;
-    private String[] narrators;
+    private String narrator;
+    private String publisher;
     private boolean hasBackgroundMusic;
+    private String genre;
     private static int idAudiobookCounter;
 
     static {
@@ -21,11 +23,13 @@ public class Audiobook extends AbstractAudioContent {
         idAudiobookCounter++;
     }
 
-    public Audiobook(String title, Date year, LocalTime duration, AudioContentType type, String author, String[] narrators, boolean hasBackgroundMusic) {
+    public Audiobook(String title, Date year, LocalTime duration, AudioContentType type, String author, String narrator, boolean hasBackgroundMusic, String publisher, String genre) {
         super(title, year, duration, type);
         this.author = author;
-        this.narrators = narrators;
+        this.narrator = narrator;
         this.hasBackgroundMusic = hasBackgroundMusic;
+        this.publisher = publisher;
+        this.genre = genre;
     }
 
     //GETTERS
@@ -33,12 +37,20 @@ public class Audiobook extends AbstractAudioContent {
         return author;
     }
 
-    public String[] getNarrators() {
-        return narrators;
+    public String getNarrator() {
+        return narrator;
     }
 
     public boolean isHasBackgroundMusic() {
         return hasBackgroundMusic;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public String getGenre() {
+        return genre;
     }
 
     //SETTERS
@@ -46,12 +58,20 @@ public class Audiobook extends AbstractAudioContent {
         this.author = author;
     }
 
-    public void setNarrators(String[] narrators) {
-        this.narrators = narrators;
+    public void setNarrator(String narrator) {
+        this.narrator = narrator;
     }
 
     public void setHasBackgroundMusic(boolean hasBackgroundMusic) {
         this.hasBackgroundMusic = hasBackgroundMusic;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     //METHODS
