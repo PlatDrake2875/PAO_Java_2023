@@ -11,5 +11,4 @@ public class Admin extends AbstractUser {
         super(username, password, firstName, lastName, email, phoneNumber, address, city, country, birthDate, profilePictureFilePath, type);
     }
 
-
 }
