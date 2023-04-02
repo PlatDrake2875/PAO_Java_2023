@@ -9,9 +9,9 @@ import java.util.Date;
 
 public abstract class AbstractAudioContent {
     private String title;
-    private Date year;
+    private Date releaseDate;
     private LocalTime duration;
-    private AudioContentType type;
+    private final AudioContentType type;
 
     private static int idCounter;
 
@@ -23,16 +23,16 @@ public abstract class AbstractAudioContent {
         idCounter++;
     }
 
-    protected AbstractAudioContent(String title, Date year, LocalTime duration, AudioContentType type) {
+    protected AbstractAudioContent(String title, Date releaseDate, LocalTime duration, AudioContentType type) {
         this.title = title;
-        this.year = year;
+        this.releaseDate = releaseDate;
         this.duration = duration;
         this.type = type;
     }
 
     public AbstractAudioContent() {
         this.title = "No title";
-        this.year = new Date();
+        this.releaseDate = new Date();
         this.duration = LocalTime.of(0, 0);
         this.type = AudioContentType.SONG;
     }
@@ -42,8 +42,8 @@ public abstract class AbstractAudioContent {
         return title;
     }
 
-    public Date getYear() {
-        return year;
+    public Date getReleaseDate() {
+        return releaseDate;
     }
 
     public LocalTime getDuration() {
@@ -59,8 +59,8 @@ public abstract class AbstractAudioContent {
         this.title = title;
     }
 
-    public void setYear(Date year) {
-        this.year = year;
+    public void setReleaseDate(Date year) {
+        this.releaseDate = year;
     }
 
     public void setDuration(LocalTime duration) {
