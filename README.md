@@ -1,11 +1,11 @@
--> About the project
+## About the project
 
 This application's purpose is to mimic most of the core functionality of Spotify and Audible if every song/podcast/audiobook was paid :).
 
 This is a work in progress repo, so there'll be quite a bit of activity on 
 it, but the end product should follow the following structure, though its subject to change in the course of development:
 
-Users: 
+### Users: 
 - User roles -> 
     + Admin  -> has access to all the features
     + Artist -> sells audio products
@@ -15,7 +15,7 @@ Users:
 - Users can make playlists that can be shuffled or replayed
 
 
-Audio Content: 
+### Audio Content: 
 - Can be put up for sale and listened to if you own it (you either purchased it or made it).  
 - Products can be discounted for a limited amounted of time. 
 - Content can be ordered by: 
@@ -29,7 +29,7 @@ Audio Content:
     3) Title
     4) Author/Artist/Narrator name
 
-Classes Used:  
+### Classes Used:  
 1) Menu  
 2) AbstractUser  
 &#9; 3) Admin  
@@ -40,15 +40,15 @@ Classes Used:
 &#9; 8) Audiobook   
 &#9; 9) Podcast   
 
-Enums:  
+### Enums:  
 1) UserType   
 2) AudioContentType  
 
-Records:   
+### Records:   
 1) Playlist   
 
 
-Types of Queries:
+### Types of Queries:
 1) Serveral sortings by different crieteria
 2) Setters and Getters for every attribute
 3) Group by's of objects
@@ -56,6 +56,7 @@ Types of Queries:
 5) Get id of object  
 
 
+### Task check list
 - [ ] Definirea sistemului/documentatie (0.5p)
 - [ ]  (minim) 10 operatiuni/interogari, 0.05p fiecare. punctaj maxim: 0.5p	 
 - [ ] (minim) 8 clase/obiecte, 0.05p fiecare. punctaj maxim: 0.5p	
