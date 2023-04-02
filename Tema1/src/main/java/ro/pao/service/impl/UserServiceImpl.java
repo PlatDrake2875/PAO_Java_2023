@@ -7,6 +7,7 @@ import ro.pao.service.UserService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ArrayList<String> getAllUsernames(LinkedList<User> users) {
+    public List<String> getAllUsernames(List<User> users) {
         ArrayList<String> usernames = new ArrayList<>();
         for (User user : users) {
             usernames.add(user.getUsername());
@@ -34,18 +35,24 @@ public class UserServiceImpl implements UserService {
         return usernames;
     }
 
+
+    @Override
+    public ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users, String sortBy) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users, String sortBy) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users, String sortBy) {
+        return null;
+    }
+
     @Override
     public ArrayList<User> getAllUsernamesByType(LinkedList<User> users, UserType type) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<User> getAllUsernamesSortedBy(LinkedList<User> users, String sortBy) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<User> getAllUsernamesByTypeSortedBy(LinkedList<User> users, String sortBy, UserType type) {
         return null;
     }
 

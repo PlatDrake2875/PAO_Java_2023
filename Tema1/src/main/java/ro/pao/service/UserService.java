@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 
 public interface UserService {
 
@@ -17,15 +18,15 @@ public interface UserService {
 
     void logout();
 
+    //Getters
+    public List<String> getAllUsernames(List<User> users);
+
     //Sortings
-    ArrayList<String> getAllUsernames(LinkedList<User> users);
-
-    ArrayList<User> getAllUsernamesByType(LinkedList<User> users, UserType type);
-
-    ArrayList<User> getAllUsernamesSortedBy(LinkedList<User> users, String sortBy);
-
-    ArrayList<User> getAllUsernamesByTypeSortedBy(LinkedList<User> users, String sortBy, UserType type);
+    ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users, String sortBy);
+    ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users, String sortBy);
+    ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users, String sortBy);
 
     //Filters
+    ArrayList<User> getAllUsernamesByType(LinkedList<User> users, UserType type);
     ArrayList<User> getAllUsersWithFirstNameBogdan(LinkedList<User> users);
 }
