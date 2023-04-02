@@ -31,6 +31,8 @@ it, but the end product should follow the following structure, though its subjec
     3) Title
     4) Author/Artist/Narrator name
 
+---
+
 ### Classes Used:  
 1) Menu  
 2) AbstractUser  
@@ -49,6 +51,7 @@ it, but the end product should follow the following structure, though its subjec
 ### Records:   
 1) Playlist   
 
+---
 
 ### Types of Queries:
 1) Serveral sortings by different crieteria
@@ -57,6 +60,7 @@ it, but the end product should follow the following structure, though its subjec
 4) Create/Remove/Update of some objects
 5) Get id of object  
 
+---
 
 ### Task check list
 - [ ] Definirea sistemului/documentatie (0.5p)
