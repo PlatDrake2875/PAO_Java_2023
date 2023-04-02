@@ -67,11 +67,14 @@ it, but the end product should follow the following structure, though its subjec
 - [ ]  (minim) 10 operatiuni/interogari, 0.05p fiecare. punctaj maxim: 0.5p	 
 - [ ] (minim) 8 clase/obiecte, 0.05p fiecare. punctaj maxim: 0.5p	
 - [ ] Folosirea corecta a incapsularii si abstractizarii, respectiv a tipurilor de date ale campurilor. punctaj maxim: 0.5p 
-- [ ] Implementarea clasei/claselor serviciu. punctaj maxim: 0.3p	programare folosind interfete. punctaj maxim: 0.3p
-- [ ] Folosirea clase abstracte. punctaj maxim: 0.2p	folosirea interfetelor. punctaj maxim: 0.2p
+- [ ] Implementarea clasei/claselor serviciu. punctaj maxim: 0.3p	
+- [ ] programare folosind interfete. punctaj maxim: 0.3p
+- [ ] Folosirea clase abstracte. punctaj maxim: 0.2p	
+- [ ] folosirea interfetelor. punctaj maxim: 0.2p
 - [ ] Folosirea claselor records. punctaj maxim: 0.2p	
 - [ ] Sortarea elementelor: 0.1p. folosind streams/comparator/functional interfaces: 0.2p	
-- [ ] Folosirea enum-urilor, folosirea optional, punctaj maxim: 0.2p 10) Folosirea structurilor de date: ArrayList/LinkedList/HashMap/HashSet/TreeMap/TreeSet, inafara sortarii. punctaj maxim: 0.4p	
+- [ ] Folosirea enum-urilor, folosirea optional, punctaj maxim: 0.2p
+- [ ]  Folosirea structurilor de date: ArrayList/LinkedList/HashMap/HashSet/TreeMap/TreeSet, inafara sortarii. punctaj maxim: 0.4p	
 - [ ] Intrebari generale, de ce am facut pana acum, inclusiv din subiectele discutate pe teams. poate sa includa SOLID principles/intrebari interviu. punctaj maxim: 1p  
 
 
