@@ -4,10 +4,8 @@ import ro.pao.model.enums.UserType;
 import ro.pao.model.users.User;
 import ro.pao.service.UserService;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.function.Predicate;
 
 public class UserServiceImpl implements UserService {
 
@@ -35,31 +33,40 @@ public class UserServiceImpl implements UserService {
         return usernames;
     }
 
-
     @Override
-    public ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users, String sortBy) {
-        return null;
+    public ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users) {
+        ArrayList<User> sortedUsers = new ArrayList<>(users);
+        sortedUsers.sort(Comparator.comparing(User::getFirstName));
+        return sortedUsers;
     }
 
     @Override
-    public ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users, String sortBy) {
-        return null;
+    public ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users) {
+        ArrayList<User> sortedUsers = new ArrayList<>(users);
+        sortedUsers.sort(Comparator.comparing(User::getLastName));
+        return sortedUsers;
     }
 
     @Override
-    public ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users, String sortBy) {
-        return null;
+    public ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users) {
+        ArrayList<User> sortedUsers = new ArrayList<>(users);
+        sortedUsers.sort(Comparator.comparing(User::getBirthDate));
+        return sortedUsers;
     }
 
     @Override
     public ArrayList<User> getAllUsernamesByType(LinkedList<User> users, UserType type) {
-        return null;
+        ArrayList<User> filteredUsers = new ArrayList<>(users);
+        filteredUsers.removeIf(user -> user.getType() != type);
+        return filteredUsers;
     }
 
     @Override
     public ArrayList<User> getAllUsersWithFirstNameBogdan(LinkedList<User> users) {
-        return null;
+        ArrayList<User> filteredUsers = new ArrayList<>(users);
+        filteredUsers.removeIf(user -> !user.getFirstName().equals("Bogdan"));
+        return filteredUsers;
     }
 
-
 }
+

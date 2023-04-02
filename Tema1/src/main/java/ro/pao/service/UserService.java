@@ -22,9 +22,9 @@ public interface UserService {
     public List<String> getAllUsernames(List<User> users);
 
     //Sortings
-    ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users, String sortBy);
-    ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users, String sortBy);
-    ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users, String sortBy);
+    ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users);
+    ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users);
+    ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users);
 
     //Filters
     ArrayList<User> getAllUsernamesByType(LinkedList<User> users, UserType type);
