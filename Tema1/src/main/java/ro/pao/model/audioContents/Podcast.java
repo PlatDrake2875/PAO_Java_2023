@@ -21,7 +21,7 @@ public class Podcast extends AbstractAudioContent {
         idPodcastCounter++;
     }
 
-    protected Podcast(String title, Date year, LocalTime duration, AudioContentType type, String genre, String[] guests, String[] topics) {
+    public Podcast(String title, Date year, LocalTime duration, AudioContentType type, String genre, String[] guests, String[] topics) {
         super(title, year, duration, type);
         this.genre = genre;
         this.guests = guests;

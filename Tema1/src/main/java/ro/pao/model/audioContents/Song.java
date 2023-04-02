@@ -22,7 +22,7 @@ public class Song extends AbstractAudioContent {
         idSongCounter++;
     }
 
-    protected Song(String title, Date year, LocalTime duration, AudioContentType type, String genre, String album, String lyrics) {
+    public Song(String title, Date year, LocalTime duration, AudioContentType type, String genre, String album, String lyrics) {
         super(title, year, duration, type);
         this.genre = genre;
         this.album = album;

@@ -32,6 +32,10 @@ public class Audiobook extends AbstractAudioContent {
         this.genre = genre;
     }
 
+    public static int getIdAudiobookCounter() {
+        return idAudiobookCounter;
+    }
+
     //GETTERS
     public String getAuthor() {
         return author;
