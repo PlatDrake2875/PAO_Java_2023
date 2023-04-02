@@ -48,16 +48,12 @@ Records:
 1) Playlist   
 
 
-Queries:
-1) Create User 
-2) Display User Data (getters for each member. Should count as individual queries, but I prefer omitting this fact) 
-3) Sort Users 
-4) Display longest audio product
-5) Change a product's price 
-6) Add discount to a product 
-7) Purchase a product 
-8) Make a playlist (Should use a HashMap for it) 
-9) Play the playlist  
+Types of Queries:
+1) Serveral sortings by different crieteria
+2) Setters and Getters for every attribute
+3) Group by's of objects
+4) Create/Remove/Update of some objects
+5) Get id of object  
 
 
 - [ ] Definirea sistemului/documentatie (0.5p)
