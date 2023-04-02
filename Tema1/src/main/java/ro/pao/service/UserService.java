@@ -3,11 +3,7 @@ package ro.pao.service;
 import ro.pao.model.enums.UserType;
 import ro.pao.model.users.User;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public interface UserService {
 
@@ -18,15 +14,38 @@ public interface UserService {
 
     void logout();
 
-    //Getters
+
+    // Getters
     public List<String> getAllUsernames(List<User> users);
+    // Unique Getters
+    public Set<String> getAllUniquesernames(List<User> users);
+    public Set<String> getAllUniqueFirstNames(List<User> users);
+    public Set<String> getAllUniqueLastNames(List<User> users);
+    public Set<String> getAllUniqueEmails(List<User> users);
+    public Set<String> getAllUniquePhoneNumbers(List<User> users);
+    public Set<String> getAllUniqueAddresses(List<User> users);
+    public Set<String> getAllUniqueCities(List<User> users);
+    public Set<String> getAllUniqueCountries(List<User> users);
+    public Set<String> getAllUniqueBirthDates(List<User> users);
+    public Set<String> getAllUniqueProfilePictureFilePaths(List<User> users);
+    public Set<String> getAllUniqueTypes(List<User> users);
+
 
     //Sortings
     ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users);
+
     ArrayList<User> getAllUsersSortedByLastName(LinkedList<User> users);
+
     ArrayList<User> getAllUsersSortedByDate(LinkedList<User> users);
 
     //Filters
     ArrayList<User> getAllUsernamesByType(LinkedList<User> users, UserType type);
+
     ArrayList<User> getAllUsersWithFirstNameBogdan(LinkedList<User> users);
+
+    //Group by
+
+    HashMap<String, List<User>> getAllUsersGroupedByCountry(LinkedList<User> users);
+
+    HashMap<String, List<User>> getAllUsersGroupedByCity(LinkedList<User> users);
 }

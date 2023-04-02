@@ -34,6 +34,105 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Set<String> getAllUniquesernames(List<User> users) {
+        Set<String> usernames = new HashSet<>();
+        for (User user : users) {
+            usernames.add(user.getUsername());
+        }
+        return usernames;
+    }
+
+    @Override
+    public Set<String> getAllUniqueFirstNames(List<User> users) {
+        Set<String> firstNames = new HashSet<>();
+        for (User user : users) {
+            firstNames.add(user.getFirstName());
+        }
+        return firstNames;
+    }
+
+    @Override
+    public Set<String> getAllUniqueLastNames(List<User> users) {
+        Set<String> lastNames = new HashSet<>();
+        for (User user : users) {
+            lastNames.add(user.getLastName());
+        }
+        return lastNames;
+    }
+
+    @Override
+    public Set<String> getAllUniqueEmails(List<User> users) {
+        Set<String> emails = new HashSet<>();
+        for (User user : users) {
+            emails.add(user.getEmail());
+        }
+        return emails;
+    }
+
+    @Override
+    public Set<String> getAllUniquePhoneNumbers(List<User> users) {
+        Set<String> phoneNumbers = new HashSet<>();
+        for (User user : users) {
+            phoneNumbers.add(user.getPhoneNumber());
+        }
+        return phoneNumbers;
+    }
+
+    @Override
+    public Set<String> getAllUniqueAddresses(List<User> users) {
+        Set<String> addresses = new HashSet<>();
+        for (User user : users) {
+            addresses.add(user.getAddress());
+        }
+        return addresses;
+    }
+
+    @Override
+    public Set<String> getAllUniqueCities(List<User> users) {
+        Set<String> cities = new HashSet<>();
+        for (User user : users) {
+            cities.add(user.getCity());
+        }
+        return cities;
+    }
+
+    @Override
+    public Set<String> getAllUniqueCountries(List<User> users) {
+        Set<String> countries = new HashSet<>();
+        for (User user : users) {
+            countries.add(user.getCountry());
+        }
+        return countries;
+    }
+
+    @Override
+    public Set<String> getAllUniqueBirthDates(List<User> users) {
+        Set<String> birthDates = new HashSet<>();
+        for (User user : users) {
+            birthDates.add(user.getBirthDate().toString());
+        }
+        return birthDates;
+    }
+
+    @Override
+    public Set<String> getAllUniqueProfilePictureFilePaths(List<User> users) {
+        Set<String> profilePictureFilePaths = new HashSet<>();
+        for (User user : users) {
+            profilePictureFilePaths.add(user.getProfilePictureFilePath());
+        }
+        return profilePictureFilePaths;
+    }
+
+    @Override
+    public Set<String> getAllUniqueTypes(List<User> users) {
+        Set<String> types = new HashSet<>();
+        for (User user : users) {
+            types.add(user.getType().toString());
+        }
+        return types;
+    }
+
+    @Override
     public ArrayList<User> getAllUsersSortedByFirstName(LinkedList<User> users) {
         ArrayList<User> sortedUsers = new ArrayList<>(users);
         sortedUsers.sort(Comparator.comparing(User::getFirstName));
@@ -66,6 +165,32 @@ public class UserServiceImpl implements UserService {
         ArrayList<User> filteredUsers = new ArrayList<>(users);
         filteredUsers.removeIf(user -> !user.getFirstName().equals("Bogdan"));
         return filteredUsers;
+    }
+
+    @Override
+    public HashMap<String, List<User>> getAllUsersGroupedByCountry(LinkedList<User> users) {
+        HashMap<String, List<User>> groupedUsers = new HashMap<>();
+        for (User user : users) {
+            if (groupedUsers.containsKey(user.getCountry())) {
+                groupedUsers.get(user.getCountry()).add(user);
+            } else {
+                groupedUsers.put(user.getCountry(), new ArrayList<>(Arrays.asList(user)));
+            }
+        }
+        return groupedUsers;
+    }
+
+    @Override
+    public HashMap<String, List<User>> getAllUsersGroupedByCity(LinkedList<User> users) {
+        HashMap<String, List<User>> groupedUsers = new HashMap<>();
+        for (User user : users) {
+            if (groupedUsers.containsKey(user.getCity())) {
+                groupedUsers.get(user.getCity()).add(user);
+            } else {
+                groupedUsers.put(user.getCity(), new ArrayList<>(Arrays.asList(user)));
+            }
+        }
+        return groupedUsers;
     }
 
 }
