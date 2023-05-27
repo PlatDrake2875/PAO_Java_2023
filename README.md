@@ -27,7 +27,7 @@ This is an active repository, witnessing constant updates and enhancements.
     3) Title 📘
     4) Author/Artist/Narrator name 🎙️
 
-### Classes Used: 🗂️  
+### Classes Used: 
 1) Menu  
 2) AbstractUser  
     3) Admin  
@@ -38,11 +38,11 @@ This is an active repository, witnessing constant updates and enhancements.
     8) Audiobook   
     9) Podcast   
 
-### Enums: 📝  
+### Enums: 
 1) UserType   
 2) AudioContentType  
 
-### Records: 🎵   
+### Records:    
 1) Playlist   
 
 ### Types of Queries: 💡
