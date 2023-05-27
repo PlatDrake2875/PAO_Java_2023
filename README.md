@@ -52,6 +52,14 @@ This is an active repository, witnessing constant updates and enhancements.
 4) Create/Remove/Update operations on some objects
 5) Retrieving object ID
 
+### Updates
+- Added database connectivity to MySQL using JDBC. Also added some CRUD operations to tables. 
+- Added design patterns (Builder, Singleton, Factory).
+- Added lots of logging.
+- Added more exceptions, iterators/spliterators, parallel streams, generics and sealed classes.
+- Added Threading.
+- Added HttpClient and used Jackson.
+- Added data exportation with CSV.
 ### Task Checklist ✅
 - [ ] System definition/documentation. Can also be summarized as a brief presentation (0.5p)
 - [ ] At least 10 operations/queries, 0.05p each. Maximum score: 0.5p
@@ -77,7 +85,7 @@ This is an active repository, witnessing constant updates and enhancements.
 - [ ] Using Sealed/Non-Sealed Classes. Maximum score: 0.125p
 - [ ] Using Generics. Maximum score: 0.125p
 - [ ] Using Iterator/Spliterator. Maximum score: 0.125p
-- [ ] Using HttpClient and Jackson Library, using mappers (as shown with ObjectMapper and the gateway folder). Maximum score: 0.25p
+- [ ] Using HttpClient and Jackson Library, using mappers. Maximum score: 0.25p
 - [ ] Questions from the entire syllabus, including Part 1. Maximum score: 1p
 
 
