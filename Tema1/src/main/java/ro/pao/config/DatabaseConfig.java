@@ -1,6 +1,6 @@
 package ro.pao.config;
 
-import ro.pao.model.audioContents.Song;
+import ro.pao.repository.Song;
 
 import java.sql.*;
 import java.util.logging.Level;

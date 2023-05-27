@@ -1,4 +1,4 @@
-package ro.pao.service.audioContentsServices;
+package ro.pao.service.interfaces;
 
 public interface Playable {
     void play();

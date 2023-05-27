@@ -1,9 +1,9 @@
 package ro.pao.model.factories;
 
 import ro.pao.model.abstracts.AbstractAudioContent;
-import ro.pao.model.audioContents.Audiobook;
-import ro.pao.model.audioContents.Podcast;
-import ro.pao.model.audioContents.Song;
+import ro.pao.repository.Audiobook;
+import ro.pao.repository.Podcast;
+import ro.pao.repository.Song;
 import ro.pao.model.enums.AudioContentType;
 
 import java.time.LocalTime;

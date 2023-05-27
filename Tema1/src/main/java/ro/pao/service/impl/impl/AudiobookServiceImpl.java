@@ -1,7 +1,7 @@
-package ro.pao.service.impl.audioContents;
+package ro.pao.service.impl.impl;
 
-import ro.pao.model.audioContents.Audiobook;
-import ro.pao.service.audioContentsServices.AudiobookService;
+import ro.pao.repository.Audiobook;
+import ro.pao.service.interfaces.AudiobookService;
 
 import java.util.Comparator;
 import java.util.List;

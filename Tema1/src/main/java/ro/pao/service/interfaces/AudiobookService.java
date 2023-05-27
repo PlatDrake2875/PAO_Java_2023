@@ -1,6 +1,6 @@
-package ro.pao.service.audioContentsServices;
+package ro.pao.service.interfaces;
 
-import ro.pao.model.audioContents.Audiobook;
+import ro.pao.repository.Audiobook;
 
 import java.util.List;
 

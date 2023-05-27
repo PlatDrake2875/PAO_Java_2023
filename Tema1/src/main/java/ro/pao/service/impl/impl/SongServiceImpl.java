@@ -1,7 +1,7 @@
-package ro.pao.service.impl.audioContents;
+package ro.pao.service.impl.impl;
 
-import ro.pao.model.audioContents.Song;
-import ro.pao.service.audioContentsServices.SongService;
+import ro.pao.repository.Song;
+import ro.pao.service.interfaces.SongService;
 
 import java.text.DateFormat;
 import java.text.ParseException;

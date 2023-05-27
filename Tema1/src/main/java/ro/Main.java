@@ -2,17 +2,17 @@ package ro;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ro.pao.config.DatabaseConfig;
-import ro.pao.model.audioContents.Audiobook;
-import ro.pao.model.audioContents.Podcast;
-import ro.pao.model.audioContents.Song;
+import ro.pao.repository.Audiobook;
+import ro.pao.repository.Podcast;
+import ro.pao.repository.Song;
 import ro.pao.model.enums.UserType;
 import ro.pao.model.records.Playlist;
 import ro.pao.model.users.Admin;
 import ro.pao.model.users.SuperAdmin;
 import ro.pao.model.users.User;
-import ro.pao.service.impl.audioContents.AudiobookServiceImpl;
-import ro.pao.service.impl.audioContents.PodcastServiceImpl;
-import ro.pao.service.impl.audioContents.SongServiceImpl;
+import ro.pao.service.impl.impl.AudiobookServiceImpl;
+import ro.pao.service.impl.impl.PodcastServiceImpl;
+import ro.pao.service.impl.impl.SongServiceImpl;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -68,7 +68,10 @@ public class Main {
 
         testAdmin();
 
-        testDb();
+        testDbInThread();
+
+        useThreadsForSongs(songs);
+
     }
 
     public static List<Audiobook> initAudiobooks() {
@@ -476,6 +479,48 @@ public class Main {
 
         dbConfig.closeConnection();
     }
+
+    public static void testDbInThread() {
+        Thread thread = new Thread(() -> {
+            try {
+                testDb();
+            } catch (Exception e) {
+                LOGGER.log(Level.SEVERE, "Error running database test", e);
+            }
+        });
+
+        thread.start();
+    }
+
+    public static void readSongsData(List<Song> songs) {
+        for (Song song : songs) {
+            LOGGER.info(song.toString());
+        }
+    }
+
+    public static void writeSongsData(List<Song> songs, String newTitle) {
+        for (Song song : songs) {
+            song.setTitle(newTitle);
+            LOGGER.info("Updated song: " + song);
+        }
+    }
+
+    public static void useThreadsForSongs(List<Song> songs) {
+        Thread readThread = new Thread(() -> readSongsData(songs));
+
+        Thread writeThread = new Thread(() -> writeSongsData(songs, "New Title"));
+
+        readThread.start();
+        writeThread.start();
+
+        try {
+            readThread.join();
+            writeThread.join();
+        } catch (InterruptedException e) {
+            LOGGER.log(Level.SEVERE, "Thread was interrupted", e);
+        }
+    }
+
 
 }
 

@@ -1,8 +1,8 @@
-package ro.pao.model.audioContents;
+package ro.pao.repository;
 
 import ro.pao.model.abstracts.AbstractAudioContent;
 import ro.pao.model.enums.AudioContentType;
-import ro.pao.service.audioContentsServices.Playable;
+import ro.pao.service.interfaces.Playable;
 
 import java.time.LocalTime;
 import java.util.Calendar;

@@ -1,6 +1,6 @@
-package ro.pao.service.audioContentsServices;
+package ro.pao.service.interfaces;
 
-import ro.pao.model.audioContents.Song;
+import ro.pao.repository.Song;
 
 import java.text.ParseException;
 import java.util.HashMap;

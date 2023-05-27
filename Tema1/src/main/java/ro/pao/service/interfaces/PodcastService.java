@@ -1,6 +1,6 @@
-package ro.pao.service.audioContentsServices;
+package ro.pao.service.interfaces;
 
-import ro.pao.model.audioContents.Podcast;
+import ro.pao.repository.Podcast;
 
 import java.util.List;
 

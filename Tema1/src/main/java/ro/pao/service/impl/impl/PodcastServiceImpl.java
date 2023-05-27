@@ -1,7 +1,7 @@
-package ro.pao.service.impl.audioContents;
+package ro.pao.service.impl.impl;
 
-import ro.pao.model.audioContents.Podcast;
-import ro.pao.service.audioContentsServices.PodcastService;
+import ro.pao.repository.Podcast;
+import ro.pao.service.interfaces.PodcastService;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,7 +1,7 @@
 package ro.pao.model.records;
 
-import ro.pao.model.audioContents.Song;
-import ro.pao.service.audioContentsServices.Playable;
+import ro.pao.repository.Song;
+import ro.pao.service.interfaces.Playable;
 
 import java.util.ArrayList;
 import java.util.List;
