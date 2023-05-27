@@ -1,82 +1,83 @@
-## About the project
+## About the Project 🚀
 
-This application's purpose is to mimic most of the core functionality of Spotify and Audible if every song/podcast/audiobook was paid :).
+This application is designed to simulate core functionalities of platforms like Spotify and Audible, with the twist that every song, podcast, and audiobook has an associated cost 💵.
 
----
+This is an active repository, witnessing constant updates and enhancements.
 
-This is a work in progress repo, so there'll be quite a bit of activity on 
-it, but the end product should follow the following structure, though its subject to change in the course of development:
+### Users: 👥
+- **User Roles:** 
+    + Admin  🛠️ - Full access to all features
+    + Artist 🎤 - Sells audio products
+    + User   🎧 - Buys audio products
+- All users can personalize their profiles with personal data such as first name, last name, date of birth, etc.
+- Users can upload a profile picture 🖼️.
+- Users can curate playlists that can be shuffled or replayed.
 
-### Users: 
-- User roles -> 
-    + Admin  -> has access to all the features
-    + Artist -> sells audio products
-    + User   -> buys audio products
-- All users have a profile interface with data about them (first name, last name, date of birth etc)
-- Users can have a profile picture
-- Users can make playlists that can be shuffled or replayed
-
-
-### Audio Content: 
-- Can be put up for sale and listened to if you own it (you either purchased it or made it).  
-- Products can be discounted for a limited amounted of time. 
-- Content can be ordered by: 
-    1) Alphabetical Order 
-    2) Length 
-    3) Upload date 
-    4) Original release date (You might've first released the product on another platform and people tend to find it easier by the release date) 
+### Audio Content: 🎵
+- Audio products can be sold and accessed by those who own it (either purchased or created).  
+- Products can feature limited-time discounts ⏳.
+- Content can be sorted by: 
+    1) Alphabetical Order 📚
+    2) Length ⏰
+    3) Upload Date 📅
+    4) Original Release Date (especially if the product was released elsewhere first)
 - Content can be grouped and displayed by:  
-    1) Type (Song, Podcast, Audiobook)  
-    2) Genre (Depends on the type) 
-    3) Title
-    4) Author/Artist/Narrator name
+    1) Type (Song, Podcast, Audiobook) 📁 
+    2) Genre (Varies with type) 🎸
+    3) Title 📘
+    4) Author/Artist/Narrator name 🎙️
 
----
-
-### Classes Used:  
+### Classes Used: 🗂️  
 1) Menu  
 2) AbstractUser  
-&#9; 3) Admin  
-&#9; 4) Artist  
-&#9; 5) User  
+    3) Admin  
+    4) Artist  
+    5) User  
 6) AbstractAudioContent  
-&#9; 7) Song   
-&#9; 8) Audiobook   
-&#9; 9) Podcast   
+    7) Song   
+    8) Audiobook   
+    9) Podcast   
 
-### Enums:  
+### Enums: 📝  
 1) UserType   
 2) AudioContentType  
 
-### Records:   
+### Records: 🎵   
 1) Playlist   
 
----
+### Types of Queries: 💡
+1) Multiple sorts using various criteria
+2) Getters and Setters for every attribute
+3) Grouping of objects
+4) Create/Remove/Update operations on some objects
+5) Retrieving object ID
 
-### Types of Queries:
-1) Serveral sortings by different crieteria
-2) Setters and Getters for every attribute
-3) Group by's of objects
-4) Create/Remove/Update of some objects
-5) Get id of object  
+### Task Checklist ✅
+- [ ] System definition/documentation. Can also be summarized as a brief presentation (0.5p)
+- [ ] At least 10 operations/queries, 0.05p each. Maximum score: 0.5p
+- [ ] At least 8 classes/objects, 0.05p each. Maximum score: 0.5p
+- [ ] Correct use of encapsulation and abstraction, including data types of fields. Maximum score: 0.5p
+- [ ] Implementation of the service class/classes. Maximum score: 0.3p
+- [ ] Programming using interfaces. Maximum score: 0.3p
+- [ ] Using abstract classes. Maximum score: 0.2p
+- [ ] Using interfaces. Maximum score: 0.2p
+- [ ] Using record classes. Maximum score: 0.2p
+- [ ] Sorting elements: 0.1p. Using streams/comparator/functional interfaces: 0.2p
+- [ ] Using enums, using optional. Maximum score: 0.2p
+- [ ] Using data structures: ArrayList/LinkedList/HashMap/HashSet/TreeMap/TreeSet, excluding sorting. Maximum score: 0.4p
+- [ ] General questions, including what we've done so far, and topics discussed on teams. May include SOLID principles/interview questions. Maximum score: 1p
+- [ ] Completing documentation/explanations with what you've done. Maximum score: 0.25p
+- [ ] Using a database, data persistence using JDBC. Maximum score: 0.5p
+- [ ] Using service/repository. Maximum score: 0.5p
+- [ ] Using at least one of each type of design pattern: 0.25p each (1 creational, 1 behavioral, 1 structural). Maximum score: 0.75p
+- [ ] Using Threads/Runnable. Maximum score: 0.5p
+- [ ] Writing to CSV. Maximum score: 0.5p
+- [ ] Using Exceptions. Maximum score: 0.25p
+- [ ] Using Logger (logging). Maximum score: 0.125p
+- [ ] Using Sealed/Non-Sealed Classes. Maximum score: 0.125p
+- [ ] Using Generics. Maximum score: 0.125p
+- [ ] Using Iterator/Spliterator. Maximum score: 0.125p
+- [ ] Using HttpClient and Jackson Library, using mappers (as shown with ObjectMapper and the gateway folder). Maximum score: 0.25p
+- [ ] Questions from the entire syllabus, including Part 1. Maximum score: 1p
 
----
 
-### Task check list
-- [ ] Definirea sistemului/documentatie (0.5p)
-- [ ]  (minim) 10 operatiuni/interogari, 0.05p fiecare. punctaj maxim: 0.5p	 
-- [ ] (minim) 8 clase/obiecte, 0.05p fiecare. punctaj maxim: 0.5p	
-- [ ] Folosirea corecta a incapsularii si abstractizarii, respectiv a tipurilor de date ale campurilor. punctaj maxim: 0.5p 
-- [ ] Implementarea clasei/claselor serviciu. punctaj maxim: 0.3p	
-- [ ] programare folosind interfete. punctaj maxim: 0.3p
-- [ ] Folosirea clase abstracte. punctaj maxim: 0.2p	
-- [ ] folosirea interfetelor. punctaj maxim: 0.2p
-- [ ] Folosirea claselor records. punctaj maxim: 0.2p	
-- [ ] Sortarea elementelor: 0.1p. folosind streams/comparator/functional interfaces: 0.2p	
-- [ ] Folosirea enum-urilor, folosirea optional, punctaj maxim: 0.2p
-- [ ]  Folosirea structurilor de date: ArrayList/LinkedList/HashMap/HashSet/TreeMap/TreeSet, inafara sortarii. punctaj maxim: 0.4p	
-- [ ] Intrebari generale, de ce am facut pana acum, inclusiv din subiectele discutate pe teams. poate sa includa SOLID principles/intrebari interviu. punctaj maxim: 1p  
-
-
-
-TODO: Write some clean markdown
