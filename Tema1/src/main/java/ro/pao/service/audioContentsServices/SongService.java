@@ -172,4 +172,7 @@ public interface SongService {
     HashMap<String, List<Song>> getAllSongsGroupedBySongReleaseDate(List<Song> songs);
 
 
+    void printAllSongTitlesWithIterator(List<Song> songs);
+
+    void printAllSongTitlesWithSpliterator(List<Song> songs);
 }

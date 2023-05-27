@@ -1,0 +1,6 @@
+Name,Description,CoverPictureFilePath,Songs,IsPublic
+Playlist 0,Playlist 0 description ,C:\Users\aopat\Documents\GitHub\PAO_Java_2023\Tema1\photos\Playlist0.jpg,"The Scientist;The Sound of Silence",Private
+Playlist 1,Playlist 1 description ,C:\Users\aopat\Documents\GitHub\PAO_Java_2023\Tema1\photos\Playlist1.jpg,"The Sound of Silence;Bohemian Rhapsody",Public
+Playlist 2,Playlist 2 description ,C:\Users\aopat\Documents\GitHub\PAO_Java_2023\Tema1\photos\Playlist2.jpg,"Believer;The Scientist",Private
+Playlist 3,Playlist 3 description ,C:\Users\aopat\Documents\GitHub\PAO_Java_2023\Tema1\photos\Playlist3.jpg,"The Sound of Silence;Bohemian Rhapsody",Public
+Playlist 4,Playlist 4 description ,C:\Users\aopat\Documents\GitHub\PAO_Java_2023\Tema1\photos\Playlist4.jpg,"Hotel California;Believer",Private

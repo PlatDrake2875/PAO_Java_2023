@@ -9,9 +9,14 @@ import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.function.Function;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class SongServiceImpl implements SongService {
+
+    private static final Logger LOGGER = Logger.getLogger(SongServiceImpl.class.getName());
 
     @Override
     public void play() {
@@ -577,5 +582,25 @@ public class SongServiceImpl implements SongService {
             }
         });
         return songsGroupedByReleaseDate;
+    }
+    public Map<String, List<Song>> groupSongsBy(Function<Song, String> classifier, List<Song> songs) {
+        return songs.stream()
+                .collect(Collectors.groupingBy(classifier));
+    }
+
+
+    @Override
+    public void printAllSongTitlesWithIterator(List<Song> songs) {
+        Iterator<Song> songIterator = songs.iterator();
+        while (songIterator.hasNext()) {
+            Song song = songIterator.next();
+            LOGGER.log(Level.INFO, song.getTitle());
+        }
+    }
+
+    @Override
+    public void printAllSongTitlesWithSpliterator(List<Song> songs) {
+        Spliterator<Song> songSpliterator = songs.spliterator();
+        songSpliterator.forEachRemaining(song -> LOGGER.log(Level.INFO, song.getTitle()));
     }
 }

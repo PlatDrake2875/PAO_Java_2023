@@ -1,8 +1,16 @@
 package ro.pao.model.records;
 
 import ro.pao.model.audioContents.Song;
+import ro.pao.service.audioContentsServices.Playable;
 
-public record Playlist(String name, String description, String coverPictureFilePath, Song[] Songs, boolean isPublic) {
+import java.util.ArrayList;
+import java.util.List;
+
+public record Playlist(String name,
+                       String description,
+                       String coverPictureFilePath,
+                       List<Playable> playables,
+                       boolean isPublic) implements Playable {
 
     public Playlist {
         if (name == null || name.isBlank()) {
@@ -14,8 +22,15 @@ public record Playlist(String name, String description, String coverPictureFileP
         if (coverPictureFilePath == null || coverPictureFilePath.isBlank()) {
             throw new IllegalArgumentException("Playlist cover picture file path cannot be null or empty!");
         }
-        if (Songs == null || Songs.length == 0) {
-            throw new IllegalArgumentException("Playlist songs cannot be null or empty!");
+        if (playables == null || playables.isEmpty()) {
+            throw new IllegalArgumentException("Playlist playables cannot be null or empty!");
+        }
+    }
+
+    @Override
+    public void play() {
+        for (Playable playable : playables) {
+            playable.play();
         }
     }
 
@@ -30,8 +45,7 @@ public record Playlist(String name, String description, String coverPictureFileP
         if (!name.equals(playlist.name)) return false;
         if (!description.equals(playlist.description)) return false;
         if (!coverPictureFilePath.equals(playlist.coverPictureFilePath)) return false;
-        // Probably incorrect - comparing Object[] arrays with Arrays.equals
-        return java.util.Arrays.equals(Songs, playlist.Songs);
+        return playables.equals(playlist.playables);
     }
 
     @Override
@@ -39,7 +53,7 @@ public record Playlist(String name, String description, String coverPictureFileP
         int result = name.hashCode();
         result = 31 * result + description.hashCode();
         result = 31 * result + coverPictureFilePath.hashCode();
-        result = 31 * result + java.util.Arrays.hashCode(Songs);
+        result = 31 * result + playables.hashCode();
         result = 31 * result + (isPublic ? 1 : 0);
         return result;
     }
@@ -50,8 +64,24 @@ public record Playlist(String name, String description, String coverPictureFileP
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", coverPictureFilePath='" + coverPictureFilePath + '\'' +
-                ", Songs=" + java.util.Arrays.toString(Songs) +
+                ", playables=" + playables +
                 ", isPublic=" + isPublic +
                 '}';
     }
+
+    public List<Song> extractSongs() {
+        List<Song> songs = new ArrayList<>();
+        for (Playable playable : playables) {
+            if (playable instanceof Song) {
+                songs.add((Song) playable);
+            }
+        }
+        return songs;
+    }
+
+    public Song[] Songs() {
+        List<Song> songs = extractSongs();
+        return songs.toArray(new Song[songs.size()]);
+    }
+
 }
