@@ -1,6 +1,6 @@
 ## About the project
 
-This application's purpose is to mimic most of the core functionality of Spotify and Audible if every song/podcast/audiobook was paid :).
+This application's purpose is to mimic most of the core functionalities of Spotify and Audible if every song/podcast/audiobook was free :).
 
 ---
 
